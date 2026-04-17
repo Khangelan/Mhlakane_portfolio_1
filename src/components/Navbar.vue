@@ -1,38 +1,43 @@
 <template>
   <nav>
-    <a href="#Home">Home</a>
-    <a href="#About">About</a>
-    <a href="#Experience">Experience</a>
-    <a href="#Projects">Projects</a>
-    <a href="#Certificates">Certificates</a>
-    <a href="#Contact">Contact</a>
+    <div class="nav-links">
+      <a href="#Home">Home</a>
+      <a href="#About">About</a>
+      <a href="#Experience">Experience</a>
+      <a href="#Projects">Projects</a>
+      <a href="#Certificates">Certificates</a>
+      <a href="#Contact">Contact</a>
+    </div>
   </nav>
 </template>
 
 <style scoped>
-.navbar {
+nav {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  background-color: #1e3a8a; /* Deep blue background */
-  padding: 15px 30px;
-  justify-content: center; /* Center the links */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 a {
   text-decoration: none;
-  color: #6b7294; /* White text for contrast */
+  color: inherit;
   font-weight: 600;
-  font-size: 1.1em;
+  font-size: 1.05em;
   padding: 8px 16px;
-  border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
+  border-radius: 6px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 a:hover {
-  background-color: #3b82f6; /* Lighter blue on hover */
-  color: #ffffff;
+  opacity: 0.9;
 }
 </style>

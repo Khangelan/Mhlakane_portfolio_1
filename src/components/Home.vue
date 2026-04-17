@@ -1,8 +1,8 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const roles = ["Frontend Developer", "Vue.js Developer", "Creative Coder"]
-const currentRole = ref("")
+const roles = ['Frontend Developer', 'Vue.js Developer', 'Creative Coder']
+const currentRole = ref('')
 let index = 0
 let charIndex = 0
 
@@ -13,7 +13,7 @@ function typeEffect() {
     setTimeout(typeEffect, 80)
   } else {
     setTimeout(() => {
-      currentRole.value = ""
+      currentRole.value = ''
       charIndex = 0
       index = (index + 1) % roles.length
       typeEffect()
@@ -31,21 +31,19 @@ onMounted(() => {
     <div class="overlay"></div>
 
     <div class="content">
-      <p class="intro">👋 Greetings by </p>
+      <p class="intro">👋 Greetings by</p>
       <h1 class="name">Khangelani Mhlakane</h1>
 
-      <h2 class="role">
-        {{ currentRole }}<span class="cursor">|</span>
-      </h2>
+      <h2 class="role">{{ currentRole }}<span class="cursor">|</span></h2>
 
       <p class="description">
-        I build modern, responsive, and user-friendly web applications.
-        Passionate about crafting clean UI and smooth user experiences.
+        I build modern, responsive, and user-friendly web applications. Passionate about crafting
+        clean UI and smooth user experiences.
       </p>
 
       <div class="buttons">
-        <button class="primary">View Projects</button>
-        <button class="secondary">Contact Me</button>
+        <a href="#Projects" class="primary">View Projects</a>
+        <a href="#Contact" class="secondary">Contact Me</a>
       </div>
     </div>
   </section>
@@ -68,14 +66,19 @@ onMounted(() => {
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(59,130,246,0.4), transparent);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.4), transparent);
   filter: blur(120px);
   animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-40px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
 }
 
 .content {
@@ -110,7 +113,9 @@ onMounted(() => {
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 .description {
@@ -126,13 +131,18 @@ onMounted(() => {
   gap: 15px;
 }
 
-button {
+button,
+.buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 25px;
   border-radius: 30px;
   border: none;
   cursor: pointer;
   transition: 0.3s;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .primary {

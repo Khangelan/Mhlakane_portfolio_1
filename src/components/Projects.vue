@@ -3,7 +3,10 @@
     <header class="section-heading">
       <span class="section-label">Portfolio</span>
       <h2>Featured Projects</h2>
-      <p>Four real projects built with modern web technologies, each showing the core tech and a live view link.</p>
+      <p>
+        Four real projects built with modern web technologies, each showing the core tech and a live
+        view link.
+      </p>
     </header>
 
     <div class="project-grid">
@@ -31,7 +34,12 @@
             </div>
 
             <div class="image-container">
-              <img :src="project.imageUrl" :alt="project.title" class="project-image" loading="lazy" />
+              <img
+                :src="project.imageUrl"
+                :alt="project.title"
+                class="project-image"
+                loading="lazy"
+              />
               <div class="crt-overlay"></div>
               <div class="chromatic-aberration" v-if="hoveredIndex === index"></div>
             </div>
@@ -48,19 +56,11 @@
                     <span class="stat-val">{{ project.status }}</span>
                   </div>
                 </div>
-                <div class="play-button">
-                  <div class="play-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <span class="play-text">View project</span>
-                </div>
               </div>
             </div>
 
             <div class="floating-particles">
-              <div class="particle" v-for="n in 6" :key="n" :style="{'--i': n}"></div>
+              <div class="particle" v-for="n in 6" :key="n" :style="{ '--i': n }"></div>
             </div>
           </div>
 
@@ -74,11 +74,18 @@
             <p class="project-description">{{ project.description }}</p>
 
             <div class="platform-tags">
-              <span class="platform" v-for="platform in project.platforms" :key="platform">{{ platform }}</span>
+              <span class="platform" v-for="platform in project.platforms" :key="platform">{{
+                platform
+              }}</span>
             </div>
 
             <div class="card-footer">
-              <a :href="project.projectUrl" class="view-project-btn synth-btn" target="_blank" rel="noreferrer">
+              <a
+                :href="project.projectUrl"
+                class="view-project-btn synth-btn"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span class="btn-glow"></span>
                 <span class="btn-text">Open</span>
               </a>
@@ -102,16 +109,18 @@ const hoveredIndex = ref(null)
 const projects = [
   {
     title: 'Hr-Management App',
-    description: 'A sleek, responsive front-end application built with Vue.js that provides an intuitive interface for managing employee information, attendance, leave requests, and organizational data. Designed to be user-friendly and visually appealing, it serves as the interactive layer of an HR system, enabling HR teams and employees to access and update information seamlessly. The app features modern UI components, smooth animations, and clean layouts to enhance user experience.',
+    description:
+      'A sleek, responsive front-end application built with Vue.js that provides an intuitive interface for managing employee information, attendance, leave requests, and organizational data. Designed to be user-friendly and visually appealing, it serves as the interactive layer of an HR system, enabling HR teams and employees to access and update information seamlessly. The app features modern UI components, smooth animations, and clean layouts to enhance user experience.',
     imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80',
-    projectUrl: 'https://github.com/Khangelan/CORE-PROJECT-1.git',
+    projectUrl: 'https://github.com/Gazelle608/core_project_1.git',
     platforms: ['Vue 3', 'Vite', 'CSS'],
     tech: 'Web App',
     status: 'Live',
   },
   {
     title: 'E-Commerce UI App',
-    description: 'A complete online shopping platform developed with a modern front-end framework (such as Vue.js or React) integrated with a robust back-end (Node.js, Express, or Django). This application provides users with an intuitive interface to browse products, manage their shopping cart, place orders, and view order history. Administrators can add, edit, and manage product listings, process orders, and handle user accounts through an admin dashboard. The app features real-time updates, secure authentication, payment integration, and responsive design for a seamless shopping experience across devices. It combines a sleek, engaging UI with a scalable backend to support high traffic and data security.',
+    description:
+      'A complete online shopping platform developed with a modern front-end framework (such as Vue.js or React) integrated with a robust back-end (Node.js, Express, or Django). This application provides users with an intuitive interface to browse products, manage their shopping cart, place orders, and view order history. Administrators can add, edit, and manage product listings, process orders, and handle user accounts through an admin dashboard. The app features real-time updates, secure authentication, payment integration, and responsive design for a seamless shopping experience across devices. It combines a sleek, engaging UI with a scalable backend to support high traffic and data security.',
     imageUrl: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=900&q=80',
     projectUrl: 'https://github.com/sandiliviwe04/TownshipsEats-App.git',
     platforms: ['Vue', 'Pinia', 'Tailwind'],
@@ -119,8 +128,9 @@ const projects = [
     status: 'Demo',
   },
   {
-    title: 'Hr-Management App Full-stack',
-    description: 'A comprehensive HR management platform built with a modern front-end framework (such as Vue.js or React) connected to a scalable back-end (Node.js with Express, Django, or similar). The application provides an intuitive interface for HR teams and employees to manage and access critical HR functionalities, including employee profiles, attendance tracking, leave requests, payroll management, and reporting. The front-end offers a clean, responsive UI with interactive dashboards, forms, and data visualizations, while the back-end handles secure data storage, user authentication, role-based access control, and integration with third-party services (like payroll or email). The system is designed to be scalable, secure, and easy to maintain, streamlining HR workflows and improving organizational efficiency.',
+    title: 'Hr-Management App Databases_and_Backend_Development-Node.js-',
+    description:
+      'A comprehensive HR management platform built with a modern front-end framework (such as Vue.js or React) connected to a scalable back-end (Node.js with Express, Django, or similar). The application provides an intuitive interface for HR teams and employees to manage and access critical HR functionalities, including employee profiles, attendance tracking, leave requests, payroll management, and reporting. The front-end offers a clean, responsive UI with interactive dashboards, forms, and data visualizations, while the back-end handles secure data storage, user authentication, role-based access control, and integration with third-party services (like payroll or email). The system is designed to be scalable, secure, and easy to maintain, streamlining HR workflows and improving organizational efficiency.',
     imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80',
     projectUrl: 'https://github.com/Gazelle608/module_2_core_project.git',
     platforms: ['Vue', 'TypeScript', 'API'],
@@ -129,9 +139,11 @@ const projects = [
   },
   {
     title: 'Oracle Appex App',
-    description: 'A powerful, web-based application developed using Oracle Application Express (APEX), designed for rapid deployment and easy customization. This app leverages Oracle’s robust database capabilities to provide dynamic, secure, and scalable solutions tailored to specific business needs. With intuitive interfaces, interactive reports, forms, and dashboards, users can efficiently manage data, automate workflows, and generate insightful analytics—all within a browser. Oracle APEX’s declarative development environment ensures quick updates and maintenance, making it ideal for enterprise applications, data management, and process automation.',
+    description:
+      '(kmhlakane@gmail.com password:Khangelani@27)  A powerful, web-based application developed using Oracle Application Express (APEX), designed for rapid deployment and easy customization. This app leverages Oracle’s robust database capabilities to provide dynamic, secure, and scalable solutions tailored to specific business needs. With intuitive interfaces, interactive reports, forms, and dashboards, users can efficiently manage data, automate workflows, and generate insightful analytics—all within a browser. Oracle APEX’s declarative development environment ensures quick updates and maintenance, making it ideal for enterprise applications, data management, and process automation.',
     imageUrl: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&q=80',
-    projectUrl: 'https://oracleapex.com/ords/r/pluton/ot-smart-analytics-app/login?session=17121489368975',
+    projectUrl:
+      'https://oracleapex.com/ords/r/pluton/ot-smart-analytics-app/login?session=17121489368975',
     platforms: ['Vue', 'Fetch', 'API'],
     tech: 'Dashboard',
     status: 'Live',
@@ -346,16 +358,28 @@ const projects = [
 .chromatic-aberration {
   position: absolute;
   inset: 0;
-  background: linear-gradient(45deg, rgba(255, 0, 0, 0.1) 0%, transparent 50%, rgba(0, 255, 255, 0.1) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.1) 0%,
+    transparent 50%,
+    rgba(0, 255, 255, 0.1) 100%
+  );
   mix-blend-mode: screen;
   animation: chromaticShift 0.5s infinite;
   pointer-events: none;
 }
 
 @keyframes chromaticShift {
-  0%, 100% { transform: translate(0); }
-  25% { transform: translate(2px, 0); }
-  75% { transform: translate(-2px, 0); }
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(2px, 0);
+  }
+  75% {
+    transform: translate(-2px, 0);
+  }
 }
 
 .image-overlay {
@@ -434,8 +458,13 @@ const projects = [
 }
 
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 18px rgba(255, 0, 255, 0.5); }
-  50% { box-shadow: 0 0 34px rgba(255, 0, 255, 0.85); }
+  0%,
+  100% {
+    box-shadow: 0 0 18px rgba(255, 0, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 34px rgba(255, 0, 255, 0.85);
+  }
 }
 
 .play-button:hover .play-icon {
@@ -476,9 +505,17 @@ const projects = [
 }
 
 @keyframes floatUp {
-  0% { transform: translateY(0) scale(0); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: translateY(-190px) scale(1); opacity: 0; }
+  0% {
+    transform: translateY(0) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-190px) scale(1);
+    opacity: 0;
+  }
 }
 
 .project-info {
@@ -500,7 +537,10 @@ const projects = [
   text-transform: uppercase;
   position: relative;
   z-index: 2;
-  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+  text-shadow:
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 30px #ff00ff;
 }
 
 .glitch-shadow,
@@ -531,19 +571,41 @@ const projects = [
 }
 
 @keyframes glitch-1 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-3px, 3px); }
-  40% { transform: translate(-3px, -3px); }
-  60% { transform: translate(3px, 3px); }
-  80% { transform: translate(3px, -3px); }
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-3px, 3px);
+  }
+  40% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  80% {
+    transform: translate(3px, -3px);
+  }
 }
 
 @keyframes glitch-2 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(3px, -3px); }
-  40% { transform: translate(3px, 3px); }
-  60% { transform: translate(-3px, -3px); }
-  80% { transform: translate(-3px, 3px); }
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(3px, -3px);
+  }
+  40% {
+    transform: translate(3px, 3px);
+  }
+  60% {
+    transform: translate(-3px, -3px);
+  }
+  80% {
+    transform: translate(-3px, 3px);
+  }
 }
 
 .project-description {
@@ -609,8 +671,12 @@ const projects = [
 }
 
 @keyframes glowMove {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }
 
 .synth-btn:hover .btn-glow {
@@ -619,7 +685,9 @@ const projects = [
 
 .synth-btn:hover {
   border-color: #ff00ff;
-  box-shadow: 0 0 18px rgba(255, 0, 255, 0.35), inset 0 0 12px rgba(255, 0, 255, 0.1);
+  box-shadow:
+    0 0 18px rgba(255, 0, 255, 0.35),
+    inset 0 0 12px rgba(255, 0, 255, 0.1);
   transform: translateY(-1px);
 }
 
