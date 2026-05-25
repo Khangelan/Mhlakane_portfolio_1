@@ -22,22 +22,41 @@ nav {
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
+  justify-content: center;
 }
 
 a {
   text-decoration: none;
   color: inherit;
   font-weight: 600;
-  font-size: 1.05em;
-  padding: 8px 16px;
+  font-size: 1rem;
+  padding: 8px 14px;
   border-radius: 6px;
   transition:
     background-color 0.3s,
-    color 0.3s;
+    color 0.3s,
+    transform 0.3s;
 }
 
 a:hover {
-  opacity: 0.9;
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  nav {
+    gap: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  a {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
 }
 </style>

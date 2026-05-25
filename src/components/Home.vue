@@ -59,14 +59,18 @@ onMounted(() => {
   color: white;
   position: relative;
   overflow: hidden;
+  padding: 40px 16px;
 }
 
 /* subtle glowing background */
 .overlay {
   position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.4), transparent);
+  top: -40px;
+  left: 50%;
+  width: 520px;
+  height: 520px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.35), transparent);
   filter: blur(120px);
   animation: float 6s ease-in-out infinite;
 }
@@ -74,28 +78,28 @@ onMounted(() => {
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
   50% {
-    transform: translateY(-40px);
+    transform: translateX(-50%) translateY(-40px);
   }
 }
 
 .content {
   text-align: center;
   z-index: 1;
-  max-width: 700px;
+  max-width: min(700px, 100%);
   padding: 20px;
 }
 
 /* typography */
 .intro {
   font-size: 18px;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .name {
-  font-size: 60px;
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
   font-weight: bold;
   margin: 10px 0;
   background: linear-gradient(to right, #3b82f6, #9333ea);
@@ -104,7 +108,7 @@ onMounted(() => {
 }
 
 .role {
-  font-size: 28px;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
   margin-bottom: 15px;
 }
 
@@ -128,6 +132,7 @@ onMounted(() => {
 .buttons {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -136,7 +141,7 @@ button,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 25px;
+  padding: 12px 24px;
   border-radius: 30px;
   border: none;
   cursor: pointer;
@@ -152,7 +157,7 @@ button,
 
 .primary:hover {
   background: #2563eb;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .secondary {
@@ -164,17 +169,48 @@ button,
 .secondary:hover {
   background: #3b82f6;
   color: white;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 /* responsive */
 @media (max-width: 768px) {
-  .name {
-    font-size: 40px;
+  .home {
+    padding: 50px 14px 30px;
   }
 
-  .role {
-    font-size: 20px;
+  .overlay {
+    width: 420px;
+    height: 420px;
+    top: -30px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 40px 12px 24px;
+  }
+
+  .overlay {
+    width: 300px;
+    height: 300px;
+    top: -20px;
+  }
+
+  .intro {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
   }
 }
 </style>

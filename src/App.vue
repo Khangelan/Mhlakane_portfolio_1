@@ -31,6 +31,13 @@ import Contact from './components/Contact.vue'
   box-sizing: border-box;
 }
 
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* BODY */
 body {
   font-family: 'Arial', sans-serif;
@@ -42,15 +49,15 @@ body {
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 16px;
 }
 
 /* MAIN CONTENT */
 .main-content {
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  padding: 30px;
+  gap: 50px;
+  padding: 20px 0;
 }
 
 /* SECTION STYLE */
@@ -60,6 +67,7 @@ body {
   border-radius: 15px;
   backdrop-filter: blur(10px);
   transition: 0.3s;
+  width: min(100%, 100%);
 }
 
 .main-content > *:hover {
@@ -70,21 +78,22 @@ body {
 /* NAVBAR */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 25px;
-  padding: 15px;
+  gap: 20px;
+  padding: 14px 16px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   margin-bottom: 30px;
   backdrop-filter: blur(10px);
+  flex-wrap: wrap;
 }
 
 nav a {
   text-decoration: none;
   color: #00d4ff;
   font-weight: 600;
-  padding: 8px 16px;
+  padding: 8px 14px;
   border-radius: 6px;
   transition: 0.3s;
 }
@@ -92,5 +101,31 @@ nav a {
 nav a:hover {
   background: #00d4ff;
   color: #000;
+}
+
+@media (max-width: 900px) {
+  .app-container {
+    padding: 16px;
+  }
+
+  .main-content {
+    gap: 35px;
+    padding: 16px 0;
+  }
+
+  .main-content > * {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  nav {
+    padding: 12px 12px;
+  }
+
+  nav a {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
 }
 </style>
