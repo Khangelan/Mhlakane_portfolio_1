@@ -7,7 +7,7 @@
         <h2>About Me</h2>
 
         <p>
-          Hi, I'm <span class="highlight">Khangelani</span> — a passionate 
+          Hi, I'm <span class="highlight">Khangelani Mhlakane</span> — a passionate 
           <strong>Frontend Developer</strong> who builds modern, responsive, 
           and user-friendly web applications.
         </p>
@@ -24,6 +24,9 @@
           <span>SQL</span>
           <span>HTML</span>
           <span>CSS</span>
+          <span>React</span>
+          <span>Git & Git Bash</span>
+          <span>Typescript</span>
           <span>Oracle Apex</span>
         </div>
 

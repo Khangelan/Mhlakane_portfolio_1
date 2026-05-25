@@ -12,7 +12,7 @@
 
         <div class="socials">
           <a href="https://github.com/Khangelan" target="_blank">💻 GitHub</a>
-          <a href="https://linkedin.com/in/khangelani-mhlakane" target="_blank">🔗 LinkedIn</a>
+          <a href="www.linkedin.com/in/khangelani-mhlakane-689638401" target="_blank">🔗 LinkedIn</a>
         </div>
 
         <!-- WhatsApp -->
