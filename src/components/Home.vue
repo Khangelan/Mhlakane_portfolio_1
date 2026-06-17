@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const roles = ['Frontend Developer', 'Vue.js Developer', 'Creative Coder']
+const roles = ['Frontend Developer', 'Vue.js Developer', 'Creative Coder','React Developer']
 const currentRole = ref('')
 let index = 0
 let charIndex = 0
@@ -27,6 +27,10 @@ onMounted(() => {
 </script>
 
 <template>
+  <Component is="style">
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500&display=swap');
+  </Component>
+
   <section id="Home" class="home">
     <div class="overlay"></div>
 
@@ -60,6 +64,8 @@ onMounted(() => {
   position: relative;
   overflow: hidden;
   padding: 40px 16px;
+  /* Crisp secondary font fallback for default paragraph text */
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* subtle glowing background */
@@ -76,8 +82,7 @@ onMounted(() => {
 }
 
 @keyframes float {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateX(-50%) translateY(0);
   }
   50% {
@@ -92,43 +97,56 @@ onMounted(() => {
   padding: 20px;
 }
 
-/* typography */
+/* ==========================================================================
+   TYPOGRAPHY CONFIGURATION (CURSIVE & SERIF UPDATES)
+   ========================================================================== */
 .intro {
-  font-size: 18px;
-  opacity: 0.75;
+  font-family: 'Pacifico', cursive; /* Modern signature cursive style */
+  font-size: 22px; /* Bumped slightly to balance the script height */
+  color: #60a5fa;
+  margin-bottom: 5px;
 }
 
 .name {
+  font-family: 'Playfair Display', serif; /* Elegant high-end display heading */
   font-size: clamp(2.75rem, 7vw, 4.5rem);
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: -0.5px;
   margin: 10px 0;
-  background: linear-gradient(to right, #3b82f6, #9333ea);
+  background: linear-gradient(to right, #3b82f6, #c084fc);
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .role {
+  font-family: 'Pacifico', cursive; /* Makes the typing effect display in script font */
   font-size: clamp(1.4rem, 3vw, 2.2rem);
-  margin-bottom: 15px;
+  font-weight: 400;
+  color: #e2e8f0;
+  margin-bottom: 20px;
 }
 
 .cursor {
+  font-family: sans-serif; /* Prevents the script font from bending your indicator bar */
+  font-weight: 100;
+  color: #3b82f6;
   animation: blink 1s infinite;
 }
 
 @keyframes blink {
-  50% {
-    opacity: 0;
-  }
+  50% { opacity: 0; }
 }
 
 .description {
   font-size: 16px;
+  line-height: 1.6;
   opacity: 0.8;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-/* buttons */
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
 .buttons {
   display: flex;
   justify-content: center;
@@ -172,7 +190,9 @@ button,
   transform: scale(1.03);
 }
 
-/* responsive */
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
 @media (max-width: 768px) {
   .home {
     padding: 50px 14px 30px;
@@ -206,7 +226,7 @@ button,
   }
 
   .intro {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .description {
