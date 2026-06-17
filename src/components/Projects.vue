@@ -74,9 +74,9 @@
             <p class="project-description">{{ project.description }}</p>
 
             <div class="platform-tags">
-              <span class="platform" v-for="platform in project.platforms" :key="platform">{{
-                platform
-              }}</span>
+              <span class="platform" v-for="platform in project.platforms" :key="platform">
+                {{ platform }}
+              </span>
             </div>
 
             <div class="card-footer">
@@ -87,11 +87,12 @@
                 rel="noreferrer"
               >
                 <span class="btn-glow"></span>
-                <span class="btn-text">Open</span>
+                <span class="btn-text">Launch App</span>
+                <span class="btn-icon">🚀</span>
               </a>
-              <div class="price-tag">
-                <span class="original">{{ project.tech }}</span>
-                <span class="sale">{{ project.status }}</span>
+              <div class="telemetry-tag">
+                <span class="type-label">{{ project.tech }}</span>
+                <span class="status-signal">{{ project.status }}</span>
               </div>
             </div>
           </div>
@@ -110,7 +111,7 @@ const projects = [
   {
     title: 'Hr-Management App',
     description:
-      'A sleek, responsive front-end application built with Vue.js that provides an intuitive interface for managing employee information, attendance, leave requests, and organizational data. Designed to be user-friendly and visually appealing, it serves as the interactive layer of an HR system, enabling HR teams and employees to access and update information seamlessly. The app features modern UI components, smooth animations, and clean layouts to enhance user experience.',
+      'This is a sleek, user-friendly Vue.js front-end application designed for human resources and organizational management. It features a modern, responsive UI with smooth animations and clean layouts to ensure an intuitive user experience.',
     imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80',
     projectUrl: 'https://github.com/Gazelle608/core_project_1.git',
     platforms: ['Vue 3', 'Vite', 'CSS'],
@@ -120,7 +121,7 @@ const projects = [
   {
     title: 'E-Commerce UI App',
     description:
-      'A complete online shopping platform developed with a modern front-end framework (such as Vue.js or React) integrated with a robust back-end (Node.js, Express, or Django). This application provides users with an intuitive interface to browse products, manage their shopping cart, place orders, and view order history. Administrators can add, edit, and manage product listings, process orders, and handle user accounts through an admin dashboard. The app features real-time updates, secure authentication, payment integration, and responsive design for a seamless shopping experience across devices. It combines a sleek, engaging UI with a scalable backend to support high traffic and data security.',
+      'This is a comprehensive, full-stack E-commerce Platform designed to handle both user-facing shopping experiences and backend administrative controls. Built with modern web frameworks, it scales to support high traffic while maintaining security.',
     imageUrl: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=900&q=80',
     projectUrl: 'https://townships-eats-app.vercel.app/#/login',
     platforms: ['Vue', 'Pinia', 'Tailwind'],
@@ -128,9 +129,9 @@ const projects = [
     status: 'Demo',
   },
   {
-    title: 'Hr-Management App Databases_and_Backend_Development-Node.js-',
+    title: 'Hr-Management App Backend',
     description:
-      'A comprehensive HR management platform built with a modern front-end framework (such as Vue.js or React) connected to a scalable back-end (Node.js with Express, Django, or similar). The application provides an intuitive interface for HR teams and employees to manage and access critical HR functionalities, including employee profiles, attendance tracking, leave requests, payroll management, and reporting. The front-end offers a clean, responsive UI with interactive dashboards, forms, and data visualizations, while the back-end handles secure data storage, user authentication, role-based access control, and integration with third-party services (like payroll or email). The system is designed to be scalable, secure, and easy to maintain, streamlining HR workflows and improving organizational efficiency.',
+      'This is a comprehensive, full-stack Human Resources Management Platform designed to streamline workplace workflows for both HR teams and employees. It connects a modern, dashboard-driven front-end with a secure, role-based back-end to handle sensitive organizational data efficiently.',
     imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80',
     projectUrl: 'https://github.com/Gazelle608/module_2_core_project.git',
     platforms: ['Vue', 'TypeScript', 'API'],
@@ -140,7 +141,7 @@ const projects = [
   {
     title: 'Oracle Appex App',
     description:
-      '(kmhlakane@gmail.com password:Khangelani@27)  A powerful, web-based application developed using Oracle Application Express (APEX), designed for rapid deployment and easy customization. This app leverages Oracle’s robust database capabilities to provide dynamic, secure, and scalable solutions tailored to specific business needs. With intuitive interfaces, interactive reports, forms, and dashboards, users can efficiently manage data, automate workflows, and generate insightful analytics—all within a browser. Oracle APEX’s declarative development environment ensures quick updates and maintenance, making it ideal for enterprise applications, data management, and process automation.',
+      'This is a rapid-deployment, web-based Enterprise Application built on Oracle Application Express (APEX) that leverages an Oracle database to deliver secure, scalable business solutions.',
     imageUrl: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&q=80',
     projectUrl:
       'https://oracleapex.com/ords/r/pluton/ot-smart-analytics-app/login?session=17121489368975',
@@ -436,49 +437,6 @@ const projects = [
   text-shadow: 0 0 10px #00ffff;
 }
 
-.play-button {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-}
-
-.play-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #ff00ff 0%, #ff0066 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  box-shadow: 0 0 18px rgba(255, 0, 255, 0.55);
-  transition: transform 0.3s ease;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    box-shadow: 0 0 18px rgba(255, 0, 255, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 34px rgba(255, 0, 255, 0.85);
-  }
-}
-
-.play-button:hover .play-icon {
-  transform: scale(1.08);
-}
-
-.play-text {
-  color: #fff;
-  font-weight: 800;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
-}
-
 .floating-particles {
   position: absolute;
   inset: 0;
@@ -641,22 +599,28 @@ const projects = [
   gap: 16px;
 }
 
+/* --- UPGRADED RETRO BUTTON --- */
 .synth-btn {
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding: 14px 24px;
-  background: transparent;
-  color: #fff;
+  gap: 10px;
+  padding: 12px 26px;
+  background: rgba(255, 0, 255, 0.05);
+  color: #ffffff;
   border: 2px solid #00ffff;
-  border-radius: 999px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow:
+    0 0 10px rgba(0, 255, 255, 0.2),
+    inset 0 0 8px rgba(0, 255, 255, 0.1);
+  cursor: pointer;
 }
 
 .btn-glow {
@@ -665,10 +629,54 @@ const projects = [
   background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
   background-size: 200% 100%;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 0;
-  animation: glowMove 2.2s linear infinite;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  animation: glowMove 3s linear infinite;
 }
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.btn-icon {
+  position: relative;
+  z-index: 2;
+  font-size: 0.95rem;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.synth-btn:hover {
+  border-color: #ff00ff;
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 0 25px rgba(255, 0, 255, 0.6),
+    0 0 50px rgba(0, 255, 255, 0.3),
+    inset 0 0 15px rgba(255, 0, 255, 0.4);
+}
+
+.synth-btn:hover .btn-glow {
+  opacity: 0.35;
+}
+
+.synth-btn:hover .btn-text {
+  transform: translateX(-2px);
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.synth-btn:hover .btn-icon {
+  transform: translate(3px, -3px);
+}
+
+.synth-btn:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+}  
 
 @keyframes glowMove {
   0% {
@@ -679,36 +687,18 @@ const projects = [
   }
 }
 
-.synth-btn:hover .btn-glow {
-  opacity: 0.22;
-}
-
-.synth-btn:hover {
-  border-color: #ff00ff;
-  box-shadow:
-    0 0 18px rgba(255, 0, 255, 0.35),
-    inset 0 0 12px rgba(255, 0, 255, 0.1);
-  transform: translateY(-1px);
-}
-
-.btn-text {
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-}
-
-.price-tag {
+.telemetry-tag {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.original {
+.type-label {
   font-size: 0.8rem;
   color: #94a3b8;
 }
 
-.sale {
+.status-signal {
   font-size: 1rem;
   font-weight: 900;
   color: #22d3ee;
