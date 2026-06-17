@@ -122,7 +122,7 @@ const projects = [
     description:
       'A complete online shopping platform developed with a modern front-end framework (such as Vue.js or React) integrated with a robust back-end (Node.js, Express, or Django). This application provides users with an intuitive interface to browse products, manage their shopping cart, place orders, and view order history. Administrators can add, edit, and manage product listings, process orders, and handle user accounts through an admin dashboard. The app features real-time updates, secure authentication, payment integration, and responsive design for a seamless shopping experience across devices. It combines a sleek, engaging UI with a scalable backend to support high traffic and data security.',
     imageUrl: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=900&q=80',
-    projectUrl: 'https://github.com/sandiliviwe04/TownshipsEats-App.git',
+    projectUrl: 'https://townships-eats-app.vercel.app/#/login',
     platforms: ['Vue', 'Pinia', 'Tailwind'],
     tech: 'Shop UI',
     status: 'Demo',

@@ -115,6 +115,7 @@ onMounted(() => {
   margin: 10px 0;
   background: linear-gradient(to right, #3b82f6, #c084fc);
   -webkit-background-clip: text;
+  background-clip: text; /* <-- ADD THIS FALLBACK HERE */
   color: transparent;
 }
 
