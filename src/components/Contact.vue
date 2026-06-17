@@ -5,33 +5,41 @@
 
     <div class="contact-container">
       
-      <!-- LEFT SIDE: CONTACT INFO -->
       <div class="contact-info">
-        <p>📧 <a href="mailto:kmhlakane@gmail.com">kmhlakane@gmail.com</a></p>
-        <p>📱 <a href="tel:0833946726">083 394 6726</a></p>
+        <div class="socials-list">
+          <a href="mailto:kmhlakane@gmail.com" class="social-item email">
+            <i class="fa-solid fa-envelope"></i>
+            <span>kmhlakane@gmail.com</span>
+          </a>
 
-        <div class="socials">
-          <a href="https://github.com/Khangelan" target="_blank">💻 GitHub</a>
-          <a href="https://www.linkedin.com/in/khangelani-mhlakane-689638401/" target="_blank">🔗 LinkedIn</a>
+          <a href="tel:0833946726" class="social-item phone">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <span>083 394 6726</span>
+          </a>
+
+          <a href="https://github.com/Khangelan" target="_blank" class="social-item github">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          
+          <a href="https://www.linkedin.com/in/khangelani-mhlakane-689638401/" target="_blank" class="social-item linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://wa.me/27833946726" target="_blank" class="social-item whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
         </div>
-
-        <!-- WhatsApp -->
-        <a 
-          href="https://wa.me/27833946726" 
-          target="_blank" 
-          class="whatsapp-btn"
-        >
-          💬 Chat on WhatsApp
-        </a>
       </div>
 
-      <!-- RIGHT SIDE: CONTACT FORM -->
       <form class="contact-form" @submit.prevent="sendEmail">
         <input type="text" v-model="name" placeholder="Your Name" required />
         <input type="email" v-model="email" placeholder="Your Email" required />
         <textarea v-model="message" placeholder="Your Message" required></textarea>
         <button type="submit">
-  {{ loading ? "Sending..." : "🚀 Send Message" }}
+          {{ loading ? "Sending..." : "🚀 Send Message" }}
         </button>
       </form>
 
@@ -89,12 +97,14 @@ export default {
 </script>
 
 <style scoped>
+/* ==========================================================================
+   1. MAIN CONTAINER & SECTION STRUCTURE
+   ========================================================================== */
 .contact-section {
   padding: 80px 20px;
   color: white;
 }
 
-/* Title */
 .contact-section h2 {
   font-size: 32px;
   margin-bottom: 10px;
@@ -105,98 +115,120 @@ export default {
   opacity: 0.7;
 }
 
-/* Container */
+/* Forces side-by-side desktop alignment */
 .contact-container {
   display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 50px; 
   max-width: 1100px;
-  margin: auto;
+  width: 100%;
+  margin: 40px auto 0 auto;
 }
 
-/* LEFT SIDE */
+/* ==========================================================================
+   2. LEFT SIDE LAYOUT (Social links & info)
+   ========================================================================== */
 .contact-info {
   flex: 1;
-  min-width: 280px;
+  min-width: 320px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-info p {
-  margin: 12px 0;
-  font-size: 15px;
+.socials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
 }
 
-/* LINKS */
-a {
-  color: #3b82f6;
+.social-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px; 
+  font-size: 16px;
+  font-weight: 500;
+  color: #ccd6f6; 
   text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
 }
 
-a:hover {
-  text-decoration: underline;
+.social-item i {
+  font-size: 22px;
+  width: 25px; 
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-/* SOCIALS */
-.socials {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+/* Hover effects */
+.social-item:hover {
+  text-decoration: none;
+  transform: translateX(5px); 
 }
 
-/* WHATSAPP BUTTON */
-.whatsapp-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 20px;
-  background: #25D366;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: 0.3s;
+.social-item:hover i {
+  transform: scale(1.15); 
 }
 
-.whatsapp-btn:hover {
-  transform: scale(1.05);
-  background: #1ebe5d;
-}
+/* Individual Brand Colors on Hover */
+.social-item.email:hover { color: #3b82f6; }
+.social-item.phone:hover { color: #60a5fa; }
+.social-item.github:hover { color: #ffffff; }
+.social-item.linkedin:hover { color: #0077b5; }
+.social-item.whatsapp:hover { color: #25d366; }
 
-/* FORM (GLASS EFFECT 🔥) */
+/* ==========================================================================
+   3. RIGHT SIDE LAYOUT (Glassmorphic form)
+   ========================================================================== */
 .contact-form {
-  flex: 1;
-  min-width: 280px;
+  flex: 1.2;
+  min-width: 320px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
 
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
-  padding: 25px;
+  -webkit-backdrop-filter: blur(12px); 
+  padding: 30px;
   border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box; 
 }
 
-/* INPUTS */
 .contact-form input,
 .contact-form textarea {
+  width: 100%; 
   margin-bottom: 15px;
   padding: 12px;
   border-radius: 10px;
   border: 1px solid transparent;
   outline: none;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: white;
-  transition: 0.3s;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical; 
 }
 
 /* 🔥 FOCUS EFFECT */
 .contact-form input:focus,
 .contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.12);
   border: 1px solid #3b82f6;
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
 /* BUTTON */
 .contact-form button {
+  width: 100%; 
   padding: 12px;
   border: none;
   background: #3b82f6;
@@ -204,23 +236,33 @@ a:hover {
   font-weight: bold;
   border-radius: 30px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .contact-form button:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   background: #2563eb;
   box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* ==========================================================================
+   4. RESPONSIVE MEDIA BREAKPOINT (Mobile & Tablet setup)
+   ========================================================================== */
+@media (max-width: 850px) {
   .contact-container {
-    flex-direction: column;
+    flex-direction: column; 
+    align-items: stretch; 
+    gap: 40px;
   }
 
   .contact-info {
-    text-align: center;
+    text-align: left; 
+    align-items: flex-start;
+    min-width: 280px;
+  }
+  
+  .contact-form {
+    min-width: 280px;
   }
 }
 </style>
