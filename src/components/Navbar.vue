@@ -1,3 +1,14 @@
+<script setup>
+const props = defineProps({
+  isLightMode: {
+    type: Boolean,
+    default: false,
+  },
+})
+
+const emit = defineEmits(['toggle-theme'])
+</script>
+
 <template>
   <nav>
     <div class="nav-links">
@@ -8,6 +19,10 @@
       <a href="#Certificates">Certificates</a>
       <a href="#Contact">Contact</a>
     </div>
+    <button class="theme-toggle" type="button" @click="emit('toggle-theme')">
+      <span v-if="props.isLightMode">🌙 Dark mode</span>
+      <span v-else>☀️ Light mode</span>
+    </button>
   </nav>
 </template>
 
@@ -44,6 +59,22 @@ a:hover {
   transform: translateY(-1px);
 }
 
+.theme-toggle {
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: inherit;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
 @media (max-width: 640px) {
   nav {
     gap: 10px;
@@ -54,7 +85,8 @@ a:hover {
     justify-content: center;
   }
 
-  a {
+  a,
+  .theme-toggle {
     padding: 10px 12px;
     font-size: 0.95rem;
   }
