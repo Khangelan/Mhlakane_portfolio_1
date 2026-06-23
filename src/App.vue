@@ -96,6 +96,12 @@ html.light-mode .home .secondary {
   color: #0c4a6e !important;
 }
 
+/* Ensure component-level hardcoded light text becomes readable in light mode */
+html.light-mode .main-content,
+html.light-mode .main-content * {
+  color: #000 !important;
+}
+
 html.light-mode .about-section {
   color: #0f172a !important;
 }
