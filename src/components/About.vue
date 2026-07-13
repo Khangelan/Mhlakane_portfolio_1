@@ -29,7 +29,7 @@
           <span>Oracle Apex</span>
         </div>
 
-        <a href="/downloads/Khangelani_Mhlakane_FlowCV_Resume_2026-04-30.pdf" download class="download-btn">
+        <a href="/downloads/Khangelani Mhlakane-CV " download class="download-btn">
           <i class="fa-solid fa-arrow-down-to-bracket"></i> Download CV
         </a>
       </div>
