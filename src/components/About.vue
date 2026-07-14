@@ -29,8 +29,9 @@
           <span>Oracle Apex</span>
         </div>
 
-        <a href="/public/downloads/Khangelani_Mhlakane.pdf" download class="download-btn">
-          <i class="fa-solid fa-arrow-down-to-bracket"></i> Download CV
+        <a href="/downloads/Khangelani_Mhlakane.pdf" download class="download-btn">
+      <i class="fa-solid fa-arrow-down-to-bracket"></i>
+      Download CV
         </a>
       </div>
 
