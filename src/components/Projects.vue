@@ -112,7 +112,7 @@ const projects = [
     title: 'Hr-Management App',
     description:
       'This is a sleek, user-friendly Vue.js front-end application designed for human resources and organizational management. It features a modern, responsive UI with smooth animations and clean layouts to ensure an intuitive user experience.',
-    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80',
+    imageUrl: 'public/downloads/hr-management-app.png',
     projectUrl: 'https://github.com/Gazelle608/core_project_1.git',
     platforms: ['Vue 3', 'Vite', 'CSS'],
     tech: 'Web App',
@@ -122,7 +122,7 @@ const projects = [
     title: 'E-Commerce UI App',
     description:
       'This is a comprehensive, full-stack E-commerce Platform designed to handle both user-facing shopping experiences and backend administrative controls. Built with modern web frameworks, it scales to support high traffic while maintaining security.',
-    imageUrl: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=900&q=80',
+    imageUrl: 'public/downloads/kasi-eats-ecommerce-ui.png',
     projectUrl: 'https://townships-eats-app.vercel.app/#/login',
     platforms: ['Vue', 'Pinia', 'Tailwind'],
     tech: 'Shop UI',
@@ -132,7 +132,7 @@ const projects = [
     title: 'Hr-Management App Backend',
     description:
       'This is a comprehensive, full-stack Human Resources Management Platform designed to streamline workplace workflows for both HR teams and employees. It connects a modern, dashboard-driven front-end with a secure, role-based back-end to handle sensitive organizational data efficiently.',
-    imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80',
+    imageUrl: 'public/downloads/hr-management-backend.png',
     projectUrl: 'https://github.com/Gazelle608/module_2_core_project.git',
     platforms: ['Vue', 'TypeScript', 'API'],
     tech: 'Productivity',
@@ -142,10 +142,22 @@ const projects = [
     title: 'Oracle Appex App',
     description:
       'This is a rapid-deployment, web-based Enterprise Application built on Oracle Application Express (APEX) that leverages an Oracle database to deliver secure, scalable business solutions.',
-    imageUrl: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900&q=80',
+    imageUrl: 'public/downloads/oracle-apex-app.png',
     projectUrl:
       'https://oracleapex.com/ords/r/pluton/ot-smart-analytics-app/login?session=17121489368975',
     platforms: ['Vue', 'Fetch', 'API'],
+    tech: 'Dashboard',
+    status: 'Live',
+  },
+
+  {
+    title: 'Innow',
+    description:
+      'INNOW is a digital attendance management system designed to simplify and secure employee attendance tracking. It allows staff to check in and out, while administrators can monitor attendance, manage staff, and maintain accurate attendance records in one centralized platform.',
+    imageUrl: 'public/downloads/ChatGPT Image Aug 14, 2026, 11_56_15 AM.png',
+    projectUrl:
+      'https://innowdas.lcstudio-incubate.co.za/login',
+    platforms: ['php','SQL', 'REST API',],
     tech: 'Dashboard',
     status: 'Live',
   },
